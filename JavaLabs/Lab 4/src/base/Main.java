@@ -16,7 +16,8 @@ public class Main {
      */
     public static void main(String[] args) {
         // Give me an example of you using switch case
-        int day = 4;
+        int day = 6;
+
         switch (day) {
             case 1:
                 System.out.println("Monday");

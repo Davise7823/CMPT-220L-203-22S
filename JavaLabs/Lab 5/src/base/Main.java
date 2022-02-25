@@ -29,11 +29,36 @@ public class Main {
 
     public static void main(String[] args) {
         //	Replace this with your dry inventory function!
-        wet_inventory();
+        //wet_inventory();
+        dry_inventory();
     }
 
     static void dry_inventory() {
         // Your DRY Solution goes here!
+
+        int[][] mix = {{4,1,4}, {2,3,0}, {3,0,0}, {1,2,0}, {0,6,10},
+                      {0,4,5}, {2,0,0}, {10,8,10}, {0,1,0}, {6,0,0},
+                      {1,0,0}, {0,7,4}, {2,0,0}, {6,3,0}, {9,2,3}};
+        int total = 0;
+        int t = 0;
+        int l = 0;
+        int p = 0;
+        int p_left = 0;
+        int l_left = 0;
+
+        for (int i = 0; i < 10; i++){
+            p += mix[i][0] * 2;
+            p_left += mix[i][0];
+            l += mix[i][1] * 8;
+            l_left += mix[i][1];
+            t += mix[i][2];
+        }
+        total = t + l + p;
+        p_left = 60 - p_left;
+        l_left = 43 - l_left;
+        System.out.println(total);
+        System.out.println(p_left);
+        System.out.println(l_left);
     }
 
     static void wet_inventory() {
