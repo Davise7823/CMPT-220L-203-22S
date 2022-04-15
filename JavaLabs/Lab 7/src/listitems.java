@@ -21,3 +21,7 @@ public class listitems{
         System.out.println(item);
     }
 }
+
+public abstract class {
+
+}
